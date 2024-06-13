@@ -1,0 +1,33 @@
+.header {
+    background-color: #000033;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .nav {
+    text-align: center;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .nav-item a:hover {
+    text-decoration: underline;
+  }

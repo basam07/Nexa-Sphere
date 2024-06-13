@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-function App() {
+//import pages
+import Home from './Web/Home';
+import SignUpForm from './Web/SignUp';
+import LoginForm from './Web/Login';
+import DashboardForm from './Web/Dashboard';
+import PrivacyForm from './Web/Privacy';
+import GenerateForm from './Web/Generate';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Main Pages */}
+        <Route exect path = "/" element = {<Home />} />
+
+        {/* Home page */}
+        <Route path = "/home" element = {<Home />} />
+
+        {/* Sign Up Page */}
+        <Route path = "/signup" element = {<SignUpForm />} />
+
+        {/* Login Page */}
+        <Route path = "/login" element = {<LoginForm />} />
+
+        {/* Dashboard page  */}
+        <Route path = "/dashboard" element = {<DashboardForm />} />
+
+        {/* Privacy page */}
+        <Route path = "/privacy" element = {<PrivacyForm />} />
+
+        {/* Generate page */}
+        <Route path = "/generate" element = {<GenerateForm />} />
+
+      </Routes>
+    </Router>
   );
 }
 
